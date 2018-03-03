@@ -15,7 +15,6 @@ public class DZ3 {
     public static void summ(){
         int c=a+b;
         System.out.println("Answer: "+c);
-
     }
 
     public static void sub(){

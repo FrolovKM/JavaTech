@@ -72,7 +72,7 @@ public class Solution {
 
         }
         if (key==3){
-            System.out.print("Enter math operation: ");
+            System.out.print("Enter math operation ('+','-','*','/'): ");
             Scanner in1=new Scanner(System.in);
             String s=in1.next();
             char k1=s.charAt(0);

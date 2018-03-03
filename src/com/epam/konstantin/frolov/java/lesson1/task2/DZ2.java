@@ -17,33 +17,33 @@ public class DZ2 {
         }
     }
       public void getMinMax(){
-            String smin,smax;
-            smin=s[0];
-            smax=s[0];
-            int kmin,kmax;
-            kmin=0;
-            kmax=0;
+            String sMin,sMax;//string with min/max number of elements
+            sMin=s[0];
+            sMax=s[0];
+            int kMin,kMax;//index of string with min/max number of elements
+            kMin=0;
+            kMax=0;
             for (int i=1;i<n;i++){
-                if (smin.length()>s[i].length()){
-                    kmin=i;
+                if (sMin.length()>s[i].length()){
+                    kMin=i;
                 }
-                if (smax.length()<s[i].length()){
-                    kmax=i;
+                if (sMax.length()<s[i].length()){
+                    kMax=i;
                 }
             }
           System.out.println("Answer:");
-          System.out.println("Min string: "+s[kmin]+" Min string Length: "+s[kmin].length());
-          System.out.println("Max string: "+s[kmax]+" Max string Length: "+s[kmax].length());
+          System.out.println("Min string: "+s[kMin]+" Min string Length: "+s[kMin].length());
+          System.out.println("Max string: "+s[kMax]+" Max string Length: "+s[kMax].length());
     }
     public void getMoreThanSRZ(){
         int summ=0;
         for (int i=0;i<n;i++){
             summ=summ+s[i].length();
         }
-        int srznach=summ/n;
+        int srZnach=summ/n;
         System.out.println("Answer:");
         for (int i=0;i<n;i++) {
-            if (s[i].length()>srznach){
+            if (s[i].length()>srZnach){
                 System.out.println("String: "+s[i]+" Length: "+s[i].length());
             }
         }
@@ -54,10 +54,10 @@ public class DZ2 {
         for (int i=0;i<n;i++){
             summ=summ+s[i].length();
         }
-        int srznach=summ/n;
+        int srZnach=summ/n;
         System.out.println("Answer:");
         for (int i=0;i<n;i++) {
-            if (s[i].length()<srznach){
+            if (s[i].length()<srZnach){
                 System.out.println("String: "+s[i]+" Length: "+s[i].length());
             }
         }
@@ -92,13 +92,13 @@ public class DZ2 {
             }
 
         }
-        int kmin=0;
+        int kMin=0;//index
         for (int i=0;i<n;i++){
-            if (k[kmin]>k[i]){
-                kmin=i;
+            if (k[kMin]>k[i]){
+                kMin=i;
             }
         }
-        System.out.println("Answer: "+w[kmin]);
+        System.out.println("Answer: "+w[kMin]);
 
     }
 
@@ -120,13 +120,11 @@ public class DZ2 {
             }
 
         }
-        int kmin=0;
-        while (k[kmin]!=1){
-            kmin++;
+        int kMin=0;//index
+        while (k[kMin]!=1){
+            kMin++;
         }
-
-
-        System.out.println("Answer: "+w[kmin]);
+        System.out.println("Answer: "+w[kMin]);
 
     }
 
@@ -144,23 +142,23 @@ public class DZ2 {
                 k[i] = 1;
             }
         }
-        int kmin=0;
-        while (k[kmin]!=1){
-            kmin++;
+        int kMin=0;//index
+        while (k[kMin]!=1){
+            kMin++;
         }
         int summ=0;
         for (int i=0;i<n;i++) {
             summ=summ+k[i];
         }
         if (summ==1){
-            System.out.println("Answer: "+w[kmin]);
+            System.out.println("Answer: "+w[kMin]);
         }
         else {
-            kmin++;
-            while (k[kmin]!=1){
-                kmin++;
+            kMin++;
+            while (k[kMin]!=1){
+                kMin++;
             }
-            System.out.println("Answer: "+w[kmin]);
+            System.out.println("Answer: "+w[kMin]);
         }
 
     }
